@@ -33,15 +33,40 @@ public class Triangulo {
     }
 
     //definição de tringulo valido
-    public boolean isTringulo (){
-        if (base < lado1 + lado2 && lado1 < base + lado2 && lado2 < base + lado1){
+    public boolean isTringulo () {
+        if (base < lado1 + lado2 && lado1 < base + lado2 && lado2 < base + lado1) {
             System.out.println("É um triangulo valido!");
             return true;
-        }else {
+        } else {
             System.out.println("Não é um triangulo valido!");
             return false;
         }
     }
+        // calcular area
+        public double calcularArea(){
+            System.out.println("/* Calcular Area */");
+            area = (base * altura) / 2;
+            return area;
+        }
+
+        //calcular perimetro
+        public double calcularPerimetro () {
+            System.out.println("/* Calcular Perimetro */");
+            perimetro = base + lado1 + lado2;
+            return perimetro;
+        }
+
+        //metodo para definir tipo do tringulo
+    public String tipoTringulo(){
+        if(lado1 == lado2 && lado1 == base){
+            return "Equilatero";
+        } else if (lado1 == lado2 || lado1 == base || lado2 == base) {
+            return "Isoceles";
+        } else {
+            return "Escaleno";  
+        }
+    }
+
 
     public double getBase() {
         return base;
