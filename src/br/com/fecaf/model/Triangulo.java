@@ -58,12 +58,16 @@ public class Triangulo {
 
         //metodo para definir tipo do tringulo
     public String tipoTringulo(){
-        if(lado1 == lado2 && lado1 == base){
+        System.out.println("/* Tipo do Tringulo */");
+        if(base == lado1 && base == lado2){
+            System.out.println("É um tringulo equilatero!");
             return "Equilatero";
         } else if (lado1 == lado2 || lado1 == base || lado2 == base) {
+            System.out.println("É um tringulo isoceles!");
             return "Isoceles";
         } else {
-            return "Escaleno";  
+            System.out.println("É um tringulo escaleno!");
+            return "Escaleno";
         }
     }
 
