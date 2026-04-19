@@ -91,6 +91,23 @@ public class Triangulo {
             return false;
         }
     }
+    
+        //Ruan - Também podemos verificar se o tringulo retangulo se encaixa na
+        // - regra do 3,4,5, onde os catetos podem ser 3 e 4 ou multiplos e a hipotenusa deve ser 5 ou multiplo.
+    public boolean isTringuloRetangulo345 (){
+        //Aqui foi necessario utilizar o if e else if com praticamente com a mesma condição,
+        // - pois o cateto1 pode ser 3 ou 4 e o cateto2 pode ser 4 ou 3.
+        if (lado1 % 3 == 0 && lado2 % 4 == 0 && base % 5 == 0) {
+            System.out.println("É um tringulo retangulo do tipo 3,4,5!");
+            return true;
+        }else if (lado1 % 4 == 0 && lado2 % 3 == 0 && base % 5 == 0) {
+            System.out.println("É um tringulo retangulo do tipo 3,4,5!");
+            return true;
+        } else {
+            System.out.println("Não é um tringulo retangulo do tipo 3,4,5!");
+            return false;
+        }
+    }
 
 
     public double getBase() {
