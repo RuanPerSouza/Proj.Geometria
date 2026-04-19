@@ -91,7 +91,7 @@ public class Triangulo {
             return false;
         }
     }
-    
+
         //Ruan - Também podemos verificar se o tringulo retangulo se encaixa na
         // - regra do 3,4,5, onde os catetos podem ser 3 e 4 ou multiplos e a hipotenusa deve ser 5 ou multiplo.
     public boolean isTringuloRetangulo345 (){
@@ -108,8 +108,7 @@ public class Triangulo {
             return false;
         }
     }
-
-
+    
     public double getBase() {
         return base;
     }
