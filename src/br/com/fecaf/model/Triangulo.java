@@ -71,6 +71,22 @@ public class Triangulo {
         }
     }
 
+    //Ruan - Metodo de verificação de tringulo retangulo
+    //primeiro vamos vamos verificar oque torna um triangulo retangulo.
+    //Um tringulo é considerado retangulo quando possui um angulo de 90 graus
+    //E para verificar isso, podemos usar o teorema de pitagoras que diz que um tringulo retangulo possui catetos ao quadrado igual a hipotenusa ao quadrado.
+    //Então, podemos dizer que lado1 = cateto1, lado2 = cateto2 e base = hipotenusa.
+    public boolean isTringuloRetangulo (){
+        System.out.println("/* Verificar se é um tringulo retangulo */");
+        if (Math.pow(lado1, 2) + Math.pow(lado2, 2) == Math.pow(base, 2)){
+            System.out.println("É um tringulo retangulo!");
+            return true;
+        } else {
+            System.out.println("Não é um tringulo retangulo!");
+            return false;
+        }
+    }
+
 
     public double getBase() {
         return base;
