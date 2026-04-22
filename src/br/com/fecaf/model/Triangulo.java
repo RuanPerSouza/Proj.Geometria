@@ -38,7 +38,6 @@ public class Triangulo {
 
     }
 
-
     //definição de tringulo valido
     public boolean isTriangulo () {
 
@@ -61,8 +60,7 @@ public class Triangulo {
         perimetro = base + lado1 + lado2;
         return perimetro;
     }
-
-
+    
     //metodo para definir tipo do tringulo
     public String tipoTriangulo(){
         if(base == lado1 && base == lado2){

@@ -19,7 +19,6 @@ public class Menu {
     //Objeto Triangulo
     private Triangulo triangulo = null;
 
-
     public void executarMenu () {
 
         boolean continuar = true;
@@ -218,13 +217,10 @@ public class Menu {
 
                     }
 
-
                     }
-
 
             }
             while (continuar);
-
 
         }
     }

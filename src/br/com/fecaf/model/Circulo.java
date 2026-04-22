@@ -32,8 +32,6 @@ public class Circulo {
         this.raio = raio;
     }
 
-
-
     public double getRaio() {
         return raio;
     }
