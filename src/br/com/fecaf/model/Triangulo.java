@@ -38,7 +38,6 @@ public class Triangulo {
 
     //definição de tringulo valido
     public boolean isTriangulo () {
-        System.out.println("*** Verificar o triangulo ***");
 
         if (lado1 + base > lado2 && lado1 + lado2 > base && lado2 + base > lado1) {
             System.out.println("É um triangulo valido!");
@@ -49,24 +48,24 @@ public class Triangulo {
         return false;
     }
 
-    // calcular area
+    // calcular area (Usando o metodo de Heron)
+    //Para calcular a Area do tringulo sem a altura é necessario usar o metodo de Heron
     public double calcularArea(){
-        System.out.println("/* Calcular Area */");
-        area = (base * altura) / 2;
-        return area;
+        double p = (base + lado1 + lado2) / 2;
+
+        //O metodo de Heron usa na sua formula raiz quadrada e para isso é usado o metodo Math.sqrt que coloca
+        // todo o calculo dentro de uma Raiz
+        return Math.sqrt(p * (p - base) * (p - lado1) * (p - lado2));
     }
 
     //calcular perimetro
     public double calcularPerimetro () {
-        System.out.println("/* Calcular Perimetro */");
         perimetro = base + lado1 + lado2;
         return perimetro;
     }
 
-
     //metodo para definir tipo do tringulo
     public String tipoTriangulo(){
-        System.out.println("/* Tipo do Tringulo */");
         if(base == lado1 && base == lado2){
             System.out.println("É um tringulo equilatero!");
             return "Equilatero";
@@ -90,7 +89,6 @@ public class Triangulo {
         double cateto2 = lado2;
         double hipotenusa = base;
 
-        System.out.println("/* Verificar se é um tringulo retangulo */");
         if (cateto1 * cateto1 + cateto2 * cateto2 == hipotenusa * hipotenusa) {
             System.out.println("É um tringulo retangulo!");
             return true;
@@ -123,16 +121,12 @@ public class Triangulo {
 
     //Metodo para exibir as informaçãoes do triangulo que não avia sido feita
     public void exibir(){
-        calcularPerimetro();
-        calcularArea();
-
         System.out.println("*** Exibir Triangulo ***");
         System.out.println("Lado1: " + lado1);
         System.out.println("Lado2: " + lado2);
         System.out.println("Base: " + base);
-        System.out.println("Area: " + area);
-        System.out.println("Perimetro: " + perimetro);
-
+        System.out.println("Area: " + calcularArea());
+        System.out.println("Perimetro: " + calcularPerimetro());
     }
 
     public double getBase() {

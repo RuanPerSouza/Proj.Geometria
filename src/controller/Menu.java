@@ -161,8 +161,7 @@ public class Menu {
                         System.out.println("/* 4 - Calcular Perimetro                 */");
                         System.out.println("/* 5 - Verificar tipo do triangulo        */");
                         System.out.println("/* 6 - Exibir triangulo                   */");
-                        System.out.println("/* 7 - Verificar 3-4-5                    */");
-                        System.out.println("/* 8 - Voltar                             */");
+                        System.out.println("/* 7 - Voltar                             */");
                         System.out.println("/******************************************/");
 
                         int userOptionTriangulo = scanner.nextInt();
@@ -198,14 +197,13 @@ public class Menu {
                             case 5:
                                 System.out.println("*** Verificar tipo do triangulo ***");
                                 this.triangulo.tipoTriangulo();
+                                this.triangulo.isTringuloRetangulo();
+                                this.triangulo.isTringuloRetangulo345();
                                 break;
                             case 6:
                                 this.triangulo.exibir();
                                 break;
                             case 7:
-                                this.triangulo.isTringuloRetangulo345();
-                                break;
-                            case 8:
                                 System.out.println("*** Voltando para o menu principal *** ");
                                 exitTriangulo = true;
                                 break;
