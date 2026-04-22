@@ -160,7 +160,7 @@ public class Menu {
                         System.out.println("/* 3 - Calcular Area                      */");
                         System.out.println("/* 4 - Calcular Perimetro                 */");
                         System.out.println("/* 5 - Verificar tipo do triangulo        */");
-                        System.out.println("/* 6 - Exibir triangulo                   */");
+                        System.out.println("/* 6 - Exibir triangulo                    */");
                         System.out.println("/* 7 - Voltar                             */");
                         System.out.println("/******************************************/");
 
@@ -176,11 +176,14 @@ public class Menu {
                                 System.out.println("Informe o valor do lado 2: ");
                                 double lado2 = scanner.nextDouble();
 
-                                System.out.println("Informe o valor da base: ");
+                                System.out.println("Informe o valor da base:   ");
                                 double base = scanner.nextDouble();
 
+                                System.out.println("Informe o valor da altura: ");
+                                double altura = scanner.nextDouble();
+
                                 //Instanciar um Triangulo
-                                this.triangulo = new Triangulo (base, lado1, lado2);
+                                this.triangulo = new Triangulo (base, lado1, lado2, altura);
                                 break;
                             case 2:
                             System.out.println("*** Verificar se é um triagulo Valido ***");

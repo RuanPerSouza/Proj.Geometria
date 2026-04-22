@@ -28,7 +28,6 @@ public class Retangulo {
         System.out.println("************************");
     }
 
-
     //Calcular o perimetro
     public double calcularPerimetro (){
         perimetro = lado1 * 2 + lado2 * 2;

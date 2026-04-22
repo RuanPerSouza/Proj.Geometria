@@ -11,30 +11,33 @@ public class Triangulo {
     Scanner scanner = new Scanner(System.in);
 
     //construtor
-    public Triangulo(double base, double lado1, double lado2){
+    public Triangulo(double base, double lado1, double lado2, double altura){
         System.out.println("Criou um novo Tringulo!");
         //Atributos do construtor
         this.base = base;
         this.lado1 = lado1;
         this.lado2 = lado2;
+        this.altura = altura;
 
     }
 
     //metodo de cadastro
     public void cadastrarTriangulo (){
-        System.out.println("/*************************/");
-        System.out.println("/*****   TRIANGULO   *****/");
-        System.out.println("/*************************/");
-        System.out.println("Informe a base:            ");
+        System.out.println("/****************************/");
+        System.out.println("/*****     TRIANGULO    *****/");
+        System.out.println("/****************************/");
+        System.out.println("Informe a Base:               ");
         base = scanner.nextDouble();
         System.out.println("Digite o lado 1 do triangulo: ");
         lado1 = scanner.nextDouble();
         System.out.println("Digite o lado 2 do triangulo: ");
         lado2 = scanner.nextDouble();
-        System.out.println("Digite a base do tringulo:  ");
+        System.out.println("Digite a Altura do triangulo: ");
         altura = scanner.nextDouble();
-        System.out.println("/*****************************/");
+        System.out.println("******************************");
+
     }
+
 
     //definição de tringulo valido
     public boolean isTriangulo () {
@@ -48,14 +51,9 @@ public class Triangulo {
         return false;
     }
 
-    // calcular area (Usando o metodo de Heron)
-    //Para calcular a Area do tringulo sem a altura é necessario usar o metodo de Heron
     public double calcularArea(){
-        double p = (base + lado1 + lado2) / 2;
-
-        //O metodo de Heron usa na sua formula raiz quadrada e para isso é usado o metodo Math.sqrt que coloca
-        // todo o calculo dentro de uma Raiz
-        return Math.sqrt(p * (p - base) * (p - lado1) * (p - lado2));
+        area = (base * altura) / 2 ;
+        return area;
     }
 
     //calcular perimetro
@@ -63,6 +61,7 @@ public class Triangulo {
         perimetro = base + lado1 + lado2;
         return perimetro;
     }
+
 
     //metodo para definir tipo do tringulo
     public String tipoTriangulo(){
@@ -125,8 +124,9 @@ public class Triangulo {
         System.out.println("Lado1: " + lado1);
         System.out.println("Lado2: " + lado2);
         System.out.println("Base: " + base);
-        System.out.println("Area: " + calcularArea());
-        System.out.println("Perimetro: " + calcularPerimetro());
+        System.out.println("Altura: " + altura);
+        System.out.println("Area: " + area);
+        System.out.println("Perimetro: " + perimetro);
     }
 
     public double getBase() {
