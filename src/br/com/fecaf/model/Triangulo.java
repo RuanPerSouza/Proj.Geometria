@@ -11,8 +11,12 @@ public class Triangulo {
     Scanner scanner = new Scanner(System.in);
 
     //construtor
-    public Triangulo(){
+    public Triangulo(double base, double lado1, double lado2){
         System.out.println("Criou um novo Tringulo!");
+        //Atributos do construtor
+        this.base = base;
+        this.lado1 = lado1;
+        this.lado2 = lado2;
 
     }
 
@@ -27,37 +31,41 @@ public class Triangulo {
         lado1 = scanner.nextDouble();
         System.out.println("Digite o lado 2 do triangulo: ");
         lado2 = scanner.nextDouble();
-        System.out.println("Digite a altura do tringulo:  ");
+        System.out.println("Digite a base do tringulo:  ");
         altura = scanner.nextDouble();
         System.out.println("/*****************************/");
     }
 
     //definição de tringulo valido
-    public boolean isTringulo () {
-        if (base < lado1 + lado2 && lado1 < base + lado2 && lado2 < base + lado1) {
+    public boolean isTriangulo () {
+        System.out.println("*** Verificar o triangulo ***");
+
+        if (lado1 + base > lado2 && lado1 + lado2 > base && lado2 + base > lado1) {
             System.out.println("É um triangulo valido!");
             return true;
-        } else {
-            System.out.println("Não é um triangulo valido!");
-            return false;
         }
+
+        System.out.println("Não é um triangulo valido!");
+        return false;
     }
-        // calcular area
-        public double calcularArea(){
-            System.out.println("/* Calcular Area */");
-            area = (base * altura) / 2;
-            return area;
-        }
 
-        //calcular perimetro
-        public double calcularPerimetro () {
-            System.out.println("/* Calcular Perimetro */");
-            perimetro = base + lado1 + lado2;
-            return perimetro;
-        }
+    // calcular area
+    public double calcularArea(){
+        System.out.println("/* Calcular Area */");
+        area = (base * altura) / 2;
+        return area;
+    }
 
-        //metodo para definir tipo do tringulo
-    public String tipoTringulo(){
+    //calcular perimetro
+    public double calcularPerimetro () {
+        System.out.println("/* Calcular Perimetro */");
+        perimetro = base + lado1 + lado2;
+        return perimetro;
+    }
+
+
+    //metodo para definir tipo do tringulo
+    public String tipoTriangulo(){
         System.out.println("/* Tipo do Tringulo */");
         if(base == lado1 && base == lado2){
             System.out.println("É um tringulo equilatero!");
@@ -72,7 +80,7 @@ public class Triangulo {
     }
 
     //Ruan - Metodo de verificação de tringulo retangulo.
-    //primeiro vamos vamos verificar oque torna um triangulo retangulo.
+    //primeiro vamos verificar oque torna um triangulo retangulo.
     //Um tringulo é considerado retangulo quando possui um angulo de 90 graus.
     //E para verificar isso, podemos usar o teorema de pitagoras que diz que um tringulo retangulo possui catetos ao quadrado igual a hipotenusa ao quadrado.
     //Então, podemos dizer que lado1 = cateto1, lado2 = cateto2 e base = hipotenusa.
@@ -92,9 +100,11 @@ public class Triangulo {
         }
     }
 
-        //Ruan - Também podemos verificar se o tringulo retangulo se encaixa na
-        // - regra do 3,4,5, onde os catetos podem ser 3 e 4 ou multiplos e a hipotenusa deve ser 5 ou multiplo.
+    //Ruan - Também podemos verificar se o tringulo retangulo se encaixa na
+    // - regra do 3,4,5, onde os catetos podem ser 3 e 4 ou multiplos e a hipotenusa deve ser 5 ou multiplo.
+
     public boolean isTringuloRetangulo345 (){
+
         //Aqui foi necessario utilizar o if e else if com praticamente com a mesma condição,
         // - pois o cateto1 pode ser 3 ou 4 e o cateto2 pode ser 4 ou 3.
         if (lado1 % 3 == 0 && lado2 % 4 == 0 && base % 5 == 0) {
@@ -106,9 +116,25 @@ public class Triangulo {
         } else {
             System.out.println("Não é um tringulo retangulo do tipo 3,4,5!");
             return false;
+
         }
+
     }
-    
+
+    //Metodo para exibir as informaçãoes do triangulo que não avia sido feita
+    public void exibir(){
+        calcularPerimetro();
+        calcularArea();
+
+        System.out.println("*** Exibir Triangulo ***");
+        System.out.println("Lado1: " + lado1);
+        System.out.println("Lado2: " + lado2);
+        System.out.println("Base: " + base);
+        System.out.println("Area: " + area);
+        System.out.println("Perimetro: " + perimetro);
+
+    }
+
     public double getBase() {
         return base;
     }
