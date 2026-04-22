@@ -27,10 +27,11 @@ public class Menu {
         do {
             System.out.println("/************************/");
             System.out.println("/*****     MENU     *****/");
-            System.out.println("/* 1 - Circulo            ");
-            System.out.println("/* 2 - Retangulo          ");
-            System.out.println("/* 3 - Triangulo          ");
-            System.out.println("/* 4 - Sair               ");
+            System.out.println("/************************/");
+            System.out.println("/* 1 - Circulo          */");
+            System.out.println("/* 2 - Retangulo        */");
+            System.out.println("/* 3 - Triangulo        */");
+            System.out.println("/* 4 - Sair             */");
             System.out.println("/************************/");
 
             System.out.println("Escolha uma opção: ");
@@ -44,14 +45,15 @@ public class Menu {
                     boolean exitCirculo = false;
 
                     while (!exitCirculo) {
-                        System.out.println("/*************************/");
-                        System.out.println("/*****     CIRCULO   *****/");
-                        System.out.println("/* 1 - Cadastrar         */");
-                        System.out.println("/* 2 - Calcular Area     */");
-                        System.out.println("/* 3 - Calcular Perimetro*/");
-                        System.out.println("/* 4 - Exibir            */");
-                        System.out.println("/* 5 - Voltar            */");
-                        System.out.println("/*************************/");
+                        System.out.println("/****************************/");
+                        System.out.println("/*****      CIRCULO     *****/");
+                        System.out.println("/****************************/");
+                        System.out.println("/* 1 - Cadastrar            */");
+                        System.out.println("/* 2 - Calcular Area        */");
+                        System.out.println("/* 3 - Calcular Perimetro   */");
+                        System.out.println("/* 4 - Exibir               */");
+                        System.out.println("/* 5 - Voltar               */");
+                        System.out.println("/****************************/");
 
                         System.out.println("Escolha uma opção: ");
 
@@ -94,15 +96,16 @@ public class Menu {
                     boolean exitRetangulo = false;
 
                     while (!exitRetangulo) {
-                        System.out.println("/*************************/");
-                        System.out.println("/*****   RETANGULO   *****/");
-                        System.out.println("/* 1 - Cadastrar         */");
-                        System.out.println("/* 2 - Calcular Area     */");
-                        System.out.println("/* 3 - Calcular Perimetro*/");
-                        System.out.println("/* 4 - Verificar se é quadrado*/");
-                        System.out.println("/* 5 - Exibir            */");
-                        System.out.println("/* 6 - Voltar            */");
-                        System.out.println("/*************************/");
+                        System.out.println("/*******************************/");
+                        System.out.println("/*****      RETANGULO      *****/");
+                        System.out.println("/*******************************/");
+                        System.out.println("/* 1 - Cadastrar               */");
+                        System.out.println("/* 2 - Calcular Area           */");
+                        System.out.println("/* 3 - Calcular Perimetro      */");
+                        System.out.println("/* 4 - Verificar se é quadrado */");
+                        System.out.println("/* 5 - Exibir                  */");
+                        System.out.println("/* 6 - Voltar                  */");
+                        System.out.println("/*******************************/");
 
                         System.out.println("Escolha uma opção: ");
 
@@ -160,7 +163,7 @@ public class Menu {
                         System.out.println("/* 3 - Calcular Area                      */");
                         System.out.println("/* 4 - Calcular Perimetro                 */");
                         System.out.println("/* 5 - Verificar tipo do triangulo        */");
-                        System.out.println("/* 6 - Exibir triangulo                    */");
+                        System.out.println("/* 6 - Exibir triangulo                   */");
                         System.out.println("/* 7 - Voltar                             */");
                         System.out.println("/******************************************/");
 
